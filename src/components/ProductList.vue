@@ -10,8 +10,7 @@
             </div>
             <div class="search-product">
                 <h2>Search Product</h2>
-                <input name="name" v-model="filterText" />
-                <button @click="searchProducts">Search</button>
+                <input name="name" v-model="filterText" placeholder="Start typing to search" />
             </div>
         </div>
         <div class="list-product">
