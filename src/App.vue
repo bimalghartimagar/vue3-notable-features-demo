@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="parent">
+  <product-list />
+  <product-list-3 />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProductList from './components/ProductList.vue'
+import ProductList3 from './components/ProductList3.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ProductList,
+    ProductList3
   }
 }
 </script>
@@ -19,8 +23,11 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+}
+.parent{
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 </style>
