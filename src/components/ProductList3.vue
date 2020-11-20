@@ -47,6 +47,7 @@ export default {
       addProductToList: function(){
         // process product data before adding to list
         this.addProduct({...this.newProduct})
+        this.newProduct = {name: '', price: 0.00};
       }
     },
 }

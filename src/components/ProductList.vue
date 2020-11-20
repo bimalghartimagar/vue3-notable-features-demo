@@ -39,6 +39,7 @@ export default {
     methods: {
       addProduct: function(){
         this.productList.push({...this.newProduct});
+        this.newProduct = {name: '', price: 0.00};
       }
     },
     computed: {
