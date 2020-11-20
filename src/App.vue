@@ -3,6 +3,9 @@
   <product-list />
   <product-list-3 />
   </div>
+
+  <teleport to="#destination">Teleported outside Vue App Component</teleport>
+
 </template>
 
 <script>
