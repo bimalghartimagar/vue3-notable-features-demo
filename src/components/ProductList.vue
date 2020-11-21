@@ -67,13 +67,7 @@ export default {
   width: 50%;
   padding: 10px;
 }
-.search-product {
-  border: 1px solid gray;
-  width: 50%;
-  margin-top: 1%;
-  padding: 10px;
-}
-.list-product {
+.search-product, .list-product {
   border: 1px solid gray;
   width: 50%;
   margin-top: 1%;
