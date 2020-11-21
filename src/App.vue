@@ -1,7 +1,18 @@
 <template>
   <div class="parent">
     <product-list />
-    <product-list-3 />
+    <product-list-3 @update-inventory="addToInventory"/>
+  </div>
+
+  <div id="inventory">
+    <span v-show="inventory.length === 0">Inventory is empty.</span>
+  <div v-show="inventory.length > 0">
+    <h3>Inventory</h3>
+    <ul>
+      <li v-for="item in inventory" :key="item.name">{{item.name}}: {{item.price}}</li>
+    </ul>
+      Total: ${{inventory.reduce((acc,product)=>acc=acc+(+product.price),0)}}
+  </div>
   </div>
 
   <teleport to="#destination">Teleported outside Vue App Component</teleport>
@@ -16,6 +27,16 @@ export default {
   components: {
     ProductList,
     ProductList3
+  },
+  data(){
+    return {
+      inventory: []
+    }
+  },
+  methods: {
+    addToInventory(products){
+      this.inventory = [...this.inventory, ...products];
+    }
   }
 };
 </script>
